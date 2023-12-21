@@ -171,10 +171,10 @@ int main()
 
   std::vector<std::thread> threads;
 
-  threads.emplace_back(report);
   threads.emplace_back(invade);
   threads.emplace_back(defend);
   threads.emplace_back(resolve);
+  threads.emplace_back(report);
 
   for (auto& thread: threads)
     thread.join();
